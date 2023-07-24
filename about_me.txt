@@ -1,0 +1,1 @@
+An attemp to create a working contract management application using pyspark via databricks and triggerring them via azure data factory
