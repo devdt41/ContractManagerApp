@@ -7,7 +7,7 @@
 				"type": "GetMetadata",
 				"dependsOn": [
 					{
-						"activity": "Notebook1",
+						"activity": "CreateNewContractsUsers",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -40,7 +40,7 @@
 				}
 			},
 			{
-				"name": "Notebook1",
+				"name": "CreateNewContractsUsers",
 				"type": "DatabricksNotebook",
 				"dependsOn": [],
 				"policy": {
