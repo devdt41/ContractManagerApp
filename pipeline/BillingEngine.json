@@ -15,7 +15,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/myofficialdev@gmail.com/billingEngine"
+					"notebookPath": "/Repos/myofficialdev@gmail.com/CMDBricksCode/billingEngine"
 				},
 				"linkedServiceName": {
 					"referenceName": "AzureDatabricks1",
