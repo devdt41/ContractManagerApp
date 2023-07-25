@@ -51,7 +51,7 @@
 			"properties": {
 				"activities": [
 					{
-						"name": "Notebook1",
+						"name": "RevenueAndInvoiceCreator",
 						"type": "DatabricksNotebook",
 						"dependsOn": [],
 						"policy": {
@@ -356,7 +356,7 @@
 						"type": "GetMetadata",
 						"dependsOn": [
 							{
-								"activity": "Notebook1",
+								"activity": "CreateNewContractsUsers",
 								"dependencyConditions": [
 									"Succeeded"
 								]
@@ -390,7 +390,7 @@
 						}
 					},
 					{
-						"name": "Notebook1",
+						"name": "CreateNewContractsUsers",
 						"type": "DatabricksNotebook",
 						"dependsOn": [],
 						"policy": {
