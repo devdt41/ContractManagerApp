@@ -1,0 +1,35 @@
+{
+	"name": "monthly",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "BillingEngine",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Month",
+				"interval": 15,
+				"startTime": "2023-08-01T22:18:00",
+				"timeZone": "India Standard Time",
+				"schedule": {
+					"minutes": [
+						0
+					],
+					"hours": [
+						0
+					],
+					"monthDays": [
+						1
+					]
+				}
+			}
+		}
+	}
+}

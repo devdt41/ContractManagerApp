@@ -1,0 +1,14 @@
+{
+	"name": "my-app-ETL-2023",
+	"properties": {
+		"globalConfigurations": {
+			"PolicyValidationEnabled": "true"
+		}
+	},
+	"location": "westcentralus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "3a855418-080d-4cac-bb3f-0c25cfc569df",
+		"tenantId": "1ae9aa17-0d3a-4715-8c0d-71f99fe32a90"
+	}
+}

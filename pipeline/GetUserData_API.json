@@ -1,0 +1,252 @@
+{
+	"name": "GetUserData_API",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy data1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "RestSource",
+						"httpRequestTimeout": "00:01:40",
+						"requestInterval": "00.00:00:00.010",
+						"requestMethod": "GET",
+						"paginationRules": {
+							"supportRFC5988": "true"
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "['gender']"
+								},
+								"sink": {
+									"name": "gender"
+								}
+							},
+							{
+								"source": {
+									"path": "['name']['title']"
+								},
+								"sink": {
+									"name": "title"
+								}
+							},
+							{
+								"source": {
+									"path": "['name']['first']"
+								},
+								"sink": {
+									"name": "firstName"
+								}
+							},
+							{
+								"source": {
+									"path": "['name']['last']"
+								},
+								"sink": {
+									"name": "lastName"
+								}
+							},
+							{
+								"source": {
+									"path": "['location']['street']['number']"
+								},
+								"sink": {
+									"name": "StreetNumber"
+								}
+							},
+							{
+								"source": {
+									"path": "['location']['street']['name']"
+								},
+								"sink": {
+									"name": "StreetName"
+								}
+							},
+							{
+								"source": {
+									"path": "['location']['city']"
+								},
+								"sink": {
+									"name": "city"
+								}
+							},
+							{
+								"source": {
+									"path": "['location']['state']"
+								},
+								"sink": {
+									"name": "state"
+								}
+							},
+							{
+								"source": {
+									"path": "['location']['country']"
+								},
+								"sink": {
+									"name": "country"
+								}
+							},
+							{
+								"source": {
+									"path": "['location']['postcode']"
+								},
+								"sink": {
+									"name": "postcode",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['location']['coordinates']['latitude']"
+								},
+								"sink": {
+									"name": "latitude"
+								}
+							},
+							{
+								"source": {
+									"path": "['location']['coordinates']['longitude']"
+								},
+								"sink": {
+									"name": "longitude"
+								}
+							},
+							{
+								"source": {
+									"path": "['location']['timezone']['offset']"
+								},
+								"sink": {
+									"name": "offset"
+								}
+							},
+							{
+								"source": {
+									"path": "['location']['timezone']['description']"
+								},
+								"sink": {
+									"name": "description"
+								}
+							},
+							{
+								"source": {
+									"path": "['email']"
+								},
+								"sink": {
+									"name": "email"
+								}
+							},
+							{
+								"source": {
+									"path": "['login']['uuid']"
+								},
+								"sink": {
+									"name": "uuid"
+								}
+							},
+							{
+								"source": {
+									"path": "['login']['username']"
+								},
+								"sink": {
+									"name": "username"
+								}
+							},
+							{
+								"source": {
+									"path": "['login']['password']"
+								},
+								"sink": {
+									"name": "password"
+								}
+							},
+							{
+								"source": {
+									"path": "['login']['salt']"
+								},
+								"sink": {
+									"name": "salt"
+								}
+							},
+							{
+								"source": {
+									"path": "['dob']['date']"
+								},
+								"sink": {
+									"name": "dob_date",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"path": "['registered']['date']"
+								},
+								"sink": {
+									"name": "registration_date",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"path": "['phone']"
+								},
+								"sink": {
+									"name": "phone"
+								}
+							},
+							{
+								"source": {
+									"path": "['cell']"
+								},
+								"sink": {
+									"name": "cell"
+								}
+							}
+						],
+						"collectionReference": "$['results']",
+						"mapComplexValuesToString": true
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "RestResource1",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DelimitedText1",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2023-07-19T22:32:32Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

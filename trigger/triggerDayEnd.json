@@ -1,0 +1,29 @@
+{
+	"name": "triggerDayEnd",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "createUserAndContract",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2023-07-21T15:10:00Z",
+				"timeZone": "UTC",
+				"schedule": {
+					"hours": [
+						11
+					]
+				}
+			}
+		}
+	}
+}
