@@ -179,7 +179,7 @@
 						},
 						"userProperties": [],
 						"typeProperties": {
-							"notebookPath": "/Repos/myofficialdev@gmail.com/CMDBricksCode/billingEngine"
+							"notebookPath": "/Repos/myofficialdev@gmail.com/ContractManagerAppDBC/DataBricksCode/billingEngine"
 						},
 						"linkedServiceName": {
 							"referenceName": "AzureDatabricks1",
@@ -723,7 +723,7 @@
 						},
 						"userProperties": [],
 						"typeProperties": {
-							"notebookPath": "/Repos/myofficialdev@gmail.com/CMDBricksCode/createUsersAndContracts"
+							"notebookPath": "/Repos/myofficialdev@gmail.com/ContractManagerAppDBC/DataBricksCode/createUsersAndContracts"
 						},
 						"linkedServiceName": {
 							"referenceName": "AzureDatabricks1",
